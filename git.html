@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Git y Github</title>
+</head>
+<body>
+    <h1>1- CHEQUEAR QUE GIT ESTE INSTALADO</h1>
+    <p>git --version</p>
+    <h1>2- CONFIGURAR GIT</h1>
+    <p>git config --global user.name "Pepito Valenciaga"
+        <br><br>
+        git config --global user.email "pepilo.valenciaga@gmail.com"
+    </p>
+    <h1>3- CREAR UNA CARPETA PARA EL PROYECTO</h1>
+    <p>mkdir nombredelproyecto
+        <br>
+        (*mkdir crea un nuevo directorio*)
+        <br><br>
+        cd nombredelproyecto
+        <br>
+        (cd cambia el enfoque a este directorio de trabajo)
+        <br><br>
+
+        SI YA TENEMOS UNA CARPETA ARMADA, SOLO LE HACEMOS CLICK DERECHO
+        Y PONEMOS "Git Bash Here"
+    </p>
+    <h1>4- INICIAR GIT</h1>
+    <p>git init
+        <br>
+        (se crea el repositorio git)
+    </p>
+    <h1>5 - AGREGAR ARCHIVOS UNTRACKED</h1>
+    <p>Los agregamos desde el editor de texto de preferencia.</p>
+    <h1>6 - STATUS (DETECCION DEL FILE)</h1>
+    <p>ls
+        <br>
+        (ls arma una lista de todos los archivos del directorio)
+        <br><br>
+        luego podemos chequear el status de Git para ver si nuestro 
+        archivo esta siendo detectado por git:
+        <br><br>
+        git status
+        <br><br>
+        los diferentes status de archivos son:
+        <br>
+        Tracked - files that Git knows about and are added to the repository
+        <br><br>
+        Untracked - files that are in your working directory, but not added to the repository
+    </p>
+    <h1>7 - STAGING (SEGUIMIENTO DE MODIFICACION DE ARCHIVOS, ANTES DE 
+        HACERLES COMMIT)</h1>
+    <p>git add nombredelarchivo.html</p>
+    <br><br>
+    EL ARCHIVO DEBERIA ESTAR EN EL STAGING ENVIRONMENT, 
+    VAMOS A CHEQUEAR EL STATUS
+    <br><br>
+    git status
+    <br><br>
+    PARA AGREGAR MAS DE UN ARCHIVO A LA VEZ:
+    <br><br>
+    git add --all
+    <br><br>
+    CHEQUEAMOS EL STATUS Y LISTO
+    <br><br>
+    git status
+    <br><br>
+    EL SHORTHAND SERIA:
+    <br><br>
+    git add -A
+    <h1>8 - COMMITS (PUNTO DE GUARDADO EN EL REPO LOCAL, EN EL CUAL
+        SE PUEDE VOLVER EN CASO DE ENCONTRAR UN BUG O QUERER HACER 
+        ALGUN CAMBIO, SIEMPRE SE DEBE ENVIAR CON UN MENSAJE)
+    </h1>
+    <p>git commit -m "Primer commit del machete Git"
+        <br><br>
+        SI NECESITAMOS HACER UN CAMBIO MUY PEQUEÑO SIN NECESIDAD
+        DE HACER STAGE. PRIMERO HACEMOS LA MODIFICACION, LUEGO 
+        CHEQUEAMOS EL STATUS:
+        <br><br>
+        git status --short
+        <br><br>
+        LOS STATUS SHORT PUEDEN SER LOS SIGUIENTES:
+        <br><br>
+        ?? - Untracked files
+        A - Files added to stage
+        M - Modified files
+        D - Deleted files
+        <br><br>
+        EL ARCHIVO SE VERA "M" POR Modified, ASI QUE DIRECTAMENTE
+        HAGAMOS EL COMMIT 
+        <br><br>
+        git commit -a -m "le agrege mas h1 al machete"
+        <br><br>
+        PARA VER EL HISTORIAL DE COMMITS DEL REPOSITORIO:
+        <br><br>
+        git log
+    </p>
+    <h1>9 - HELP</h1>
+    <p>EN CASO DE OLVIDAR COMANDOS, USAMOS HELP
+        <br><br>
+        git commmandoquequeeramosinfoo -help
+        o sino 
+        git help --all
+    </p>
+    <h1>10 - BRANCH (</h1>
+    <p></p>
+    <h1></h1>
+    <p></p>
+    <h1></h1>
+    <p></p>
+    <h1></h1>
+    <p></p>
+    <h1></h1>
+    <p></p>
+    <h1></h1>
+    <p></p>
+    <h1></h1>
+    <p></p>
+
+
+</body>
+</html>
