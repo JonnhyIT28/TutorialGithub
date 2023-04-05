@@ -8,21 +8,142 @@
     <title>Git y Github</title>
 </head>
 <body>
-    <h1></h1>
+    <h1>REPOSITORIO LOCAL</h1>
+    <h2>1- CHEQUEAR QUE GIT ESTE INSTALADO</h2>
+    <p>git --version</p>
+    <h2>2- CONFIGURAR GIT</h1>
+    <p>git config --global user.name "Pepito Valenciaga"
+        <br><br>
+        git config --global user.email "pepilo.valenciaga@gmail.com"
+    </p>
+    <h2>3- CREAR UNA CARPETA PARA EL PROYECTO</h1>
+    <p>mkdir nombredelproyecto
+        <br>
+        (*mkdir crea un nuevo directorio*)
+        <br><br>
+        cd nombredelproyecto
+        <br>
+        (cd cambia el enfoque a este directorio de trabajo)
+        <br><br>
+
+        SI YA TENEMOS UNA CARPETA ARMADA, SOLO LE HACEMOS CLICK DERECHO
+        Y PONEMOS "Git Bash Here"
+    </p>
+    <h2>4- INICIAR GIT</h1>
+    <p>git init
+        <br>
+        (se crea el repositorio git)
+    </p>
+
+    <h2>5 - AGREGAR ARCHIVOS UNTRACKED</h2>
+    <p>Los agregamos desde el editor de texto de preferencia.</p>
+    <h2>6 - STATUS (A-DETECCION DE FILES)</h2>
+    <p>ls
+        <br>
+        (ls arma una lista de todos los archivos del directorio)
+        <br><br>
+        luego podemos chequear el status de Git para ver si nuestro 
+        archivo esta siendo detectado por git:
+        <br><br>
+        git status
+        <br><br>
+        los diferentes status de archivos son:
+        <br>
+        Tracked - files that Git knows about and are added to the repository
+        <br><br>
+        Untracked - files that are in your working directory, but not added to the repository
+    </p>
+    <h2>7 - STAGING (B-TRACKEO DE MODIFICACION DE ARCHIVOS, ANTES DE 
+        HACERLES COMMIT)</h1>
+    <p>git add nombredelarchivo.html</p>
+    <br><br>
+    EL ARCHIVO DEBERIA ESTAR EN EL STAGING ENVIRONMENT, 
+    VAMOS A CHEQUEAR EL STATUS
+    <br><br>
+    git status
+    <br><br>
+    PARA AGREGAR MAS DE UN ARCHIVO A LA VEZ:
+    <br><br>
+    git add --all
+    <br><br>
+    CHEQUEAMOS EL STATUS Y LISTO
+    <br><br>
+    git status
+    <br><br>
+    EL SHORTHAND SERIA:
+    <br><br>
+    git add -A
+    <h2>8 - COMMITS (C-PUNTO DE GUARDADO EN EL REPO LOCAL, EN EL CUAL
+        SE PUEDE VOLVER EN CASO DE ENCONTRAR UN BUG O QUERER HACER 
+        ALGUN CAMBIO, SIEMPRE SE DEBE ENVIAR CON UN MENSAJE)
+    </h2>
+    <p>git commit -m "Primer commit del machete Git"
+        <br><br>
+        SI NECESITAMOS HACER UN CAMBIO MUY PEQUEÑO SIN NECESIDAD
+        DE HACER STAGE. PRIMERO HACEMOS LA MODIFICACION, LUEGO 
+        CHEQUEAMOS EL STATUS:
+        <br><br>
+        git status --short
+        <br><br>
+        LOS STATUS SHORT PUEDEN SER LOS SIGUIENTES:
+        <br><br>
+        ?? - Untracked files
+        A - Files added to stage
+        M - Modified files
+        D - Deleted files
+        <br><br>
+        EL ARCHIVO SE VERA "M" POR Modified, ASI QUE DIRECTAMENTE
+        HAGAMOS EL COMMIT 
+        <br><br>
+        git commit -a -m "le agrege mas h1 al machete"
+        <br><br>
+        PARA VER EL HISTORIAL DE COMMITS DEL REPOSITORIO:
+        <br><br>
+        git log
+    </p>
+    <h2>9 - HELP</h2>
+    <p>EN CASO DE OLVIDAR COMANDOS, USAMOS HELP
+        <br><br>
+        git commmandoquequeeramosinfoo -help
+        o sino 
+        git help --all
+    </p>
+    <h2>10 - BRANCH (D- ES UNA NUEVA VERSION SEPARADA DEL REPOSITORIO
+        PRINCIPAL, LA CUAL SE MODIFICA PARA LUEGO AGREGARLA AL REPO
+        PRICIPAL)
+    </h2>
+    <p>git branch nombre-del-branch-ejemplo-imagenes-machetito
+        <br><br>
+        AHORA DEBEMOS CONFIRMAR QUE FUE CREADO:
+        <br><br>
+        git branch
+        <br><br>
+        NOS APARECERAN LOS BRANCHS CREAODS, Y ABJO UN * CON EL BRANCH
+        DONDE ESTAMOS UBICACOS. PARA CAMBIAR DE BRANCH HACEMOS:
+        <br><br>
+        git checkout nombre-del-branch-ejemplo-imagenes-machetito
+        <br><br>
+        NOS DARA UN MENSAJE DE QUE NOS MOVIMOS DE BRANCH
+        <br><br>
+        AL HACER UNAS MODIFICACIONES EN LOS FILES, PODEMOS HACER
+        STAGING EN LOS FILES:
+        <br><br>
+        git add --all
+    </p>
+    
+    <h2>CAMBIO DE BRANCHS</h2>
+    <p>git checkout master</p>
+    <h2></h2>
     <p></p>
-    <h1></h1>
+    <h2></h2>
     <p></p>
-    <h1></h1>
+    <h2></h2>
     <p></p>
-    <h1></h1>
+    <h2></h2>
     <p></p>
-    <h1></h1>
+    <h2></h2>
     <p></p>
-    <h1></h1>
-    <p></p>
-    <h1></h1>
-    <p></p>
-    <h1></h1>
-    <p></p>
+
+
 </body>
 </html>
