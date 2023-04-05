@@ -126,17 +126,51 @@
         NOS DARA UN MENSAJE DE QUE NOS MOVIMOS DE BRANCH
         <br><br>
         AL HACER UNAS MODIFICACIONES EN LOS FILES, PODEMOS HACER
-        STAGING EN LOS FILES:
+        STAGING Y COMMITS EN LOS FILES PARALELOS:
         <br><br>
         git add --all
     </p>
-    <h2></h2>
-    <p></p>
-    <h2></h2>
-    <p></p>
-    <h2></h2>
-    <p></p>
-    <h2></h2>
+    
+    <h2>CAMBIO DE BRANCHS</h2>
+    <p>git checkout master
+        <br><br>
+        CON ESTO VOLVEMOS AL BRANCH PRINCIPAL, Y AL CODIGO ANTES
+        DE SER MODIFICADO.
+        LO MISMO OCURRIRA CON FILES, SI AGREGAMOS FILES EN EL BRANCH
+        MACHETITO, NO ESTARAN EN EL MASTER AL VOLVER.
+    </p>
+    <h2>BRANCH DE EMERGENCIA</h2>
+    <p>EN CASO DE QUE OCURRA UN BUG EN MASTER, PERO NO HAYAMOS TERMINADO
+        CON MACHETITO, Y DEBEMOS SOLUCIOANR EL PROBLEMA, CREAMOS UN 
+        BRANCH DE EMERGENCIA
+        <br><br>
+        git checkout -b branch-de-emergencia-ejemplo
+        <br><br>
+        SOLUCIONAMOS EL ERROR, HACEMOS STAGING, COMMIT, Y YA PODEMOS UNIR
+        LOS 2 BRANCHS
+    </p>
+    <h2>LIGAR BRANCHS</h2>
+    <p>PRIMERO DEBEMOS IR AL MASTER BRANCH
+        <br><br>
+        git checkout master
+        <br><br>
+        AHORA LOS PODEMOS UNIR
+        <br><br>
+        git merge branch-emergencia
+        <br><br>
+        COMO EL MASTER NO FUE MODIFICADO, GIT VE AL BRANCH DE EMERGENCIA
+        COMO UNA EXTENSION DEL MASTER, Y LO SOBREESCRIBEE A TRAVES DEL
+        MERGE. AHORA PODEMOS ELIMINAR EL BRANCH DE EMERGENCIA
+        <br><br>
+        git branch -d branch-emergencia
+        <br><br>
+        AHORA VAMOS A LIGAR LAS MODIFICACIONES DE MACHETITO
+        <br><br>
+        git checkout machetito 
+        <br><br>
+        SUPONINOD QE MACHTITO ESTA COMPLETO
+    </p>
+    <h2>asd</h2>
     <p></p>
     <h2></h2>
     <p></p>
