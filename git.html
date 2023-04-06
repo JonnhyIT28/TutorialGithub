@@ -182,15 +182,59 @@
         <br><br>
     </p>
     <h1>REPOSITORIO VIRTUAL</h1>
+    <h2>1 - CONECTAR AL REPO VIRTUAL</h2>
+    <p>DESPUES DE CREAR UN REPOSITORIO EN GITHUB, COPIAMOS EL LINK 
+        Y LO PEGAMOS EN EL SIGUIENE COMANDO:
+        <br><br>
+        git remote add origin https://github.com/w3schools-test/hello-world.git
+        <br><br>
+        AHORA VAMOS A LIGAR EL MASTER BRANCH A LA URL Y SETEARLO COMO
+        EL BRANCH REMOTO POR DEFECTO:
+        <br><br>
+        git push --set-upstream origin master
+        <br><br>
+    </p>
 
-    <p></p>
-
-    <p></p>
-
-    <h2></h2>
-    <p></p>
-    <h2></h2>
-    <p></p>
+    <h2>2 - EDITAR CODIGO EN GITHUB</h2>
+    <p>APRETAMOS EL ARCHIVO QEU QUEREMOS EDITAR, O APRERTAMOS EL LAPIZ
+        PARA EDITAR TEXTO, LUEGO HACEMOS UN COMMIT Y CLICK EN :
+        <br><br>
+        Commit directly to the master branch
+        <br><br>
+        AHI HACEMOS UN COMMIT EN EL MASTER BRANCH
+    </p>
+    <h2>3 - PULL DE GITHUB</h2>
+    <p>PULL PERMITE MANTENERTE AL DIA CON LA COPIA MAS ACTUAL DEL 
+        PROYECTO, ESTA COMPUESTO POR fetch y merge:
+        <br><br>
+        fetch SINCRONIZA EL HISTORIAL DE CAMBIOS DEL REPO VIRTUAL CON
+        EL LOCAL, HACIENDO:
+        <br><br>
+        git fetch origin
+        <br><br>
+        UNA VEZ QUE EL HISTORIAL SE ACTUALIZE, PODEMOS CHEQUEAR EL
+        STATUS:
+        <br><br>
+        git status
+        <br><br>
+        NOS SALDRA QUE NUESTRO BRANCH ESTA DETRAS EL "ORIGIN/MASTER" POR 
+        1 COMMIT, QUE SERIA EL README QUE EDITAMOS RECIEN
+        <br><br>
+        PODEMOS VERLO HACIENDO UN LOG, AHORA SERA:
+        <br><br>
+        git log origin/master
+        <br><br>
+        ESTE NOS MOSTRARA EL COMIT HECHO EN EL REPO VIRTUAL
+        <br><br>
+        TAMBIEN PODEMOS VERFICIARLO EN VIENDO LAS DIFERENCIAS ENTRE
+        EL MASTER Y EL ORIGIN/MASTER
+        <br><br>
+        git diff origin/master
+        <br><br>
+        NOS APARECERA EN ROJO LAS DIFERENCIAS, AHORA PODEMOS HACER merge 
+        <br><br>
+        
+    </p>
 
 
 </body>
