@@ -313,6 +313,39 @@
         AHORA TENEMOS UNA COPIA DEL FORK EN NUESTRO REPO LOCAL
         <br><br>
         </p>
+    <h2>CLONE</h2>
+    <p>CLONE ES UNA COPIA DE UN FORK, OSEA UN REPOSITORIO QUE NO ES UN NUESTRO, COMPLETO EN NUESTRO REPO LOCAL (GIT)
+        <br><br>
+        PRIMERO APRETAMOS EN "CODE" Y COPIAMOS LA URL DEL REPO EN GITHUB
+        <br><br>
+        DESDE GITBUSH CLONAMOS EL REPO CON:
+        <br><br>
+        git clone https://github.com/w3schools-test/w3schools-test.github.io.git
+        <br><br>
+        AHORA TENEMOS EL REPO NUEVO QUE PODEMOS VERLO CON "ls" o VS CODE
+        <br><br>
+        PODEMOS IR AL DIRECTORIO CON "cd" PARA CHEQUEAR EL "status" y luego log para confirmar que tenemos el repo COMPLETO
+        <br><br>
+    </p>
+    <h2>CLONE REMOTES</h2>
+    <p>AHORA TENEMOS LA COPIA EN EL REPO LOCAL, PERO SU ORIGIN CORRESPONDE AL ARCHIVO ORIGINAL, Y QUEREMOS QUE SEA
+        NUESTRO FORK, PARA ESO:
+        <br><br>
+        gir remote -v
+        <br><br>
+        VEMOS QUE EL ORIGIN SIGUE LIGADO AL ARCHIVO ORIGINAL, DEBEMOS RENOMBRARLO COMO UPSTREAM:
+        <br><br>
+        git remote rename origin upstream
+        git remote -v
+        <br><br>
+        AHORA PODEMOS VER QUE LO HEMOS RENOMBRADO, AHORA COPIAMOS LA URL DE NUESTRO FORK Y LO CONVERTIMOS EN ORIGIN:
+        <br><br>
+        git remote add origin https://github.com/JonnhyIT28/GitTutorial.git
+        git remote -v
+        <br><br>
+        AHORA TENEMOS 2 REMOTES, EL ORIGION QUE VA A NUESTRO FORK, Y EL UPSTREAM QUE SERIA EL ORIGINAL
+        <br><br>
+    </p>
 
 </body>
 </html>
