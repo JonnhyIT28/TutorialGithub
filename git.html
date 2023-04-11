@@ -443,6 +443,70 @@
         <br><br>
         git remote set-url origin email@gmail.com:repositorioremoto/jonnhyIT.git
     </p>
-    <h1>GIT REVERT</h1>
+    <h1>GIT UNDO</h1>
+    <h2>GIT REVERT</h2>
+    <p>REVERT ES UN COMANDO QUE NOS PERMITE TOMAR UN COMMIT ANTERIOR Y AGREGARLO
+        COMO UN NUEVO COMMIT MANTENIENOD EL LOG INTACTO.
+        <br><br>
+        PRIMERO BUSCAMOS EL COMMIT ANTERIOR.
+        <br><br>
+        LUEGO CREAMOS UN NUEVO COMMIT CON ESTE.
+        <br><br>
+        SUPONGAMOS QUE ACABAMOS DE HACER COMMIT CON UN ERROR O UN FILE BORRADO.
+        <br><br>
+        PRIMERO DEBEMOS ENCONTRAR EL COMMIT AL QUE QUEREMOS VOLVER. PARA EESO DEBEMOS:
+        <br><br>
+        git log --oneline
+        <br><br>
+        --ONELINE NOS RESUME EL LOG DE CADA COMMIT EN UNA LINEA MOSTRANDO LOS PRIMEROS 7 
+        CARACTERES DEL COMMIT HASH Y EL MENSAJE COMMIT. BUSCAMOS EL COMMIT AL QUE QUEREMOS
+        VOLVER. SUPONGAMOS QUE QUEREMOS VOLVER AL ULTIMO COMMIT:
+        <br><br>
+        git revert HEAD --no-edit
+        <br><br>
+        CON REVERT HEAD VOLVEMOS AL ULTIMO CAMBIO Y COMMIT, Y CON --NO-EDIT SALTEAMOS EL 
+        MENSAJE DE COMMIT Y NOS QUEDAMOS CON EL ULTIMO MENSAJE.
+        <br><br>
+        AL HACER git log --oneline NUEVAMENTE VEREMOS QUE SALE EL COMMIT Revert.
+        <br><br>
+        PARA VOLVER A COMMITS ANTERIORES AL ULTIMOS HACEMOS:
+        <br><br>
+        git revert HEAD~x 
+        <br><br>
+        X SERIA UN NUMERO, 1 SERIA 1 ANTES DEL ULTIMO, 2 SERIA 2 ANTES DEL ULTIMO, ETC.
+        <br><br>
+    </p>
+    <h2>GIT RESET</h2>
+    <p>RESET ES EL COMANDO QUE USAMOS CUANDO QUEREMOS VOLVER A UN COMMIT ANTERIOR DEL
+        REPO LOCAL, DESCARTANDO CUALQUIER CAMBIO HECHO DESPUES DE ESE COMMIT.
+        <br><br>
+        PRIMERO BUSCAMOS EL COMMIT VIEJO AL QUE QUEREMOS VOLVER CON log
+        <br><br>
+        git log --oneline
+        <br><br>
+        UNA VEZ ENCONTRADO EL COMMIT, HACEMOS EL RESET CON EL commithash( primeros 7 caracteres
+        del commit hash encontrado en log)
+        <br><br>
+        git reset 1a2b3c4
+        <br><br>
+        AHORA SI CHEQUEAMOS EL LOG, VEREMOS QUE EL ULTIMO COMMIT ES EL QUE ACABAMOS DE VOLVER.
+        <br><br>
+        ES USADO EN REPOS LOCALES, CUIDADO EN EN LOS REMOTOS PORQUE PODES ELIMINAR TRABAJOS AJENOS.
+    </p>
+    <h2>GIT AMEND</h2>
+    <p>GIT AMEND MODIFICA EL ULTIMO COMMIT AGREGANDO LOS CAMBIOS DEL STAGING ACTUAL Y
+        CREANDO UN NUEVO COMMIT QUE REEMPLAZA AL ORIGINAL.
+        <br><br>
+        SUPONGAMOS QUE HICIMOS COMMIT Y ESCRIBIMOS MAL EL MENSAJE.
+        <br><br>
+        MODIFIQUEMOS EL MENSAJE DEL ULTIMO COMMIT:
+        <br><br>
+        git commit --amend -m "corrigiendo el mensaje del commit"
+        <br><br>
+        AL REHACER git log VEREMOS EL MENSAJE MODIFICADO
+        <br><br>
+        AHORA SI QUEREMOS MODIFICAR EL FILE FUNCIONA IGUAL, SOLO DEBEMOS GUARDAR LOS CAMBIOS 
+        EN STAGING Y YA PODEMOS HACER got commit --amend
+    </p>
 </body>
 </html>
