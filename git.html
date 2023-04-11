@@ -372,7 +372,77 @@
         <br><br>
         AHORA TODOS LOS .LOG FILES Y CARPETAS TEMP SERAN IGNORADAS, SOLO PUEDEN SER TRACKEADAS X GIT.
     </p>
-    <h2>SSH</h2>
-    <p></p>
+    <h2>GIT SECURITY</h2>
+    <p>HASTA AHORA TODAS LAS CONEXIONES CON EL REPOSITORIO REMOTO LAS HICIMOS CON HTTPS.
+        PERO SI TRABAJAMOS CON REDES INSEGURAS, DEBERIAMOS USAR SSH.
+        <br><br>
+        SSH ES UN PROTOCOLO DE DEE SEGURIDDAD DE RED USADO PARA MANEJO DE REDES, TRANSFERENCIA
+        DE ARCHIVOS REMOTOS Y ACCESO AL SISTEMA REMOTO.
+        <br><br>
+        TRABAJA CON LLAVES (keys), UNA PUBLICA Y UNA PRIVADA, LAS CUALES SON GENERADAS POR UN
+        ALGORITMO DE NUMEROS PRIMOS, LA PUBLICA ES DERIVADA DE LA PRIVADA.
+        <br><br>
+    </p>
+    <h3>GENERAR UN PAR DE KEYS SSH</h3>
+    <p>EMPEZAMOS CREANDO UN KEY USANDO EL EMAIL COMO LABEL:
+        <br><br>
+        ssh-keygen -t rsa -b 4096 -C "email@gmail.com"
+        <br><br>
+        UNA VEZ CREADA NOS SALDRA A DONDE QUEREMOS GUARDAR LA LLAVE, NOS DIRA ESTO:
+        <br><br>
+        Enter file in which to save the key (/c/Users/user/.ssh/id_rsa):
+        <br><br>
+        AQUI SELECCIONAMOS LA DIRECCION DEL ARCHIVO O APRETAMOS ENTER PARA QUE LO GUARDE
+        EN LA DIRECCION POR DEFECTO.
+        <br><br>
+        LUEGO NOS VA A PDIR QUE AGREGUEMOS UN PASSPHRASE (frase de entrada, algo asi como un 2IF).
+        DICE ASI:
+        <br><br>
+        Enter passphrase (empty for no passphrase):
+        Enter same passphrase again:
+        <br><br>
+        ESTO AUMENTA LA SEGURIDAD PERO SE DEBERA CREAR UN NUEVO PASSPHRASE CADA VEZ QUE SE
+        USE LA KEY SSH.
+        <br><br>
+        AHORA AGREGMOAS EL PAR DE KEYS SSH AL SSH-AGENTT (USANDO LA DIRECCION DE ARRIBA).
+        <br><br>
+        ssh-add /Users/user/.ssh/id_rsa
+        Enter passphrase for /Users/user/.ssh/id_rsa:
+        Identity added: /Users/user/.ssh/id_rsa (test@w3schools.com)
+        <br><br>
+        NOS PEDIRA PONER EL PASSPHRASE, Y LISTO, LAS KEYS ESTAN LISTAS.
+    </p>
+    <h3>COPIAR LA SSH PUBLIC KEY</h3>
+    <p>USAREMOS EL COMANDO clip PARA COPIAS LA PUBLIC KEY AL CLIPBOARD DE GITHUB.
+        <br><br>
+        CON LA DIRECCION QUE USAMOS PARA CREAR LA KEY PONEMOS:
+        <br><br>
+        clip < /Users/user/.ssh/id_rsa.pub
+        <br><br>
+        AHORA VAMOS A GITHUB, CLICK EN NUESTRO PERFIL Y PONEMOS "SETTINGS"
+        <br><br>
+        LUEGO "SSH AND GPG KEYS"
+        <br><br>
+        LE DAMOS UN TITULO, Y PEGAMOS LA SSH PUBLIC KEY EN EL CAMPO "KEY" Y LUEGO APRETAMOS
+        "ADD SSH KEY"
+        <br><br>
+        NOS PEDIRA LA CONTRA DE GITHUB. LUEGO SE AGREGARA LA SSH KEY.
+        <br><br>
+    </p>
+    <h3>TEST DE CONEXION DE SSH A GITHUB</h3>
+    <p>ssh -T email@gmail.com</p>
+    <br><br>
+    SI APARECE TU USER EN LA ULTIMA LINEA, SE TESTEO LA CONEXION CON EXITO.
+    <br><br>
+    <h3>AGREGAR UN NUEVO REMOTO A GITHUB VIA SSH</h3>
+    <p>VAMOS A GITHUB, COPIAMOS LA DIRECCION SSH DESDE "CODE", Y AGREGAMOS EL ORIGIN DESDE GIT:
+        <br><br>
+        git remote add ssh-origin email@gmail.com:repositorioremoto/jonnhyIT.git
+        <br><br>
+        TAMBIEN SE PUEDE MODIFICAR EL ORIGIN DE HTTPS A SSH CON EL SIGUIENTE COMANDO:
+        <br><br>
+        git remote set-url origin email@gmail.com:repositorioremoto/jonnhyIT.git
+    </p>
+    <h1>GIT REVERT</h1>
 </body>
 </html>
